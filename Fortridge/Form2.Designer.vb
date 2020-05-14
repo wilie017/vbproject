@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class ManageCustomer
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class ManageCustomer
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.firstnameTbx = New System.Windows.Forms.TextBox()
@@ -40,26 +40,27 @@ Partial Class ManageCustomer
         Me.Label8 = New System.Windows.Forms.Label()
         Me.gendertCmbobx = New System.Windows.Forms.ComboBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.CustID = New System.Windows.Forms.TextBox()
         Me.ClearBtn = New System.Windows.Forms.Button()
         Me.UpdateBtn = New System.Windows.Forms.Button()
         Me.SaveBtn = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.DelBtn = New System.Windows.Forms.Button()
         Me.EditBtn = New System.Windows.Forms.Button()
         Me.RefreshBtn = New System.Windows.Forms.Button()
         Me.CustomerDgv = New System.Windows.Forms.DataGridView()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.SrcBtn = New System.Windows.Forms.Button()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.src_idTbx = New System.Windows.Forms.TextBox()
+        Me.SrcPhneLbl = New System.Windows.Forms.Label()
+        Me.src_phoneTbx = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.src_nameTbx = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeleteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DelBtn = New System.Windows.Forms.Button()
-        Me.NewCustBtn = New System.Windows.Forms.Button()
-        Me.CustID = New System.Windows.Forms.TextBox()
+        Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.CustomerDgv, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -200,7 +201,6 @@ Partial Class ManageCustomer
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.CustID)
-        Me.GroupBox1.Controls.Add(Me.NewCustBtn)
         Me.GroupBox1.Controls.Add(Me.ClearBtn)
         Me.GroupBox1.Controls.Add(Me.UpdateBtn)
         Me.GroupBox1.Controls.Add(Me.SaveBtn)
@@ -211,9 +211,17 @@ Partial Class ManageCustomer
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Personal Details"
         '
+        'CustID
+        '
+        Me.CustID.Location = New System.Drawing.Point(657, 150)
+        Me.CustID.Name = "CustID"
+        Me.CustID.Size = New System.Drawing.Size(68, 20)
+        Me.CustID.TabIndex = 29
+        Me.CustID.Visible = False
+        '
         'ClearBtn
         '
-        Me.ClearBtn.Location = New System.Drawing.Point(422, 150)
+        Me.ClearBtn.Location = New System.Drawing.Point(474, 150)
         Me.ClearBtn.Name = "ClearBtn"
         Me.ClearBtn.Size = New System.Drawing.Size(70, 23)
         Me.ClearBtn.TabIndex = 37
@@ -222,7 +230,7 @@ Partial Class ManageCustomer
         '
         'UpdateBtn
         '
-        Me.UpdateBtn.Location = New System.Drawing.Point(329, 150)
+        Me.UpdateBtn.Location = New System.Drawing.Point(381, 150)
         Me.UpdateBtn.Name = "UpdateBtn"
         Me.UpdateBtn.Size = New System.Drawing.Size(70, 23)
         Me.UpdateBtn.TabIndex = 36
@@ -231,7 +239,7 @@ Partial Class ManageCustomer
         '
         'SaveBtn
         '
-        Me.SaveBtn.Location = New System.Drawing.Point(239, 150)
+        Me.SaveBtn.Location = New System.Drawing.Point(291, 150)
         Me.SaveBtn.Name = "SaveBtn"
         Me.SaveBtn.Size = New System.Drawing.Size(70, 23)
         Me.SaveBtn.TabIndex = 35
@@ -240,6 +248,7 @@ Partial Class ManageCustomer
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.Button1)
         Me.GroupBox2.Controls.Add(Me.DelBtn)
         Me.GroupBox2.Controls.Add(Me.EditBtn)
         Me.GroupBox2.Controls.Add(Me.RefreshBtn)
@@ -251,6 +260,24 @@ Partial Class ManageCustomer
         Me.GroupBox2.TabIndex = 27
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Records"
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(691, 198)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(70, 23)
+        Me.Button1.TabIndex = 36
+        Me.Button1.Text = "Export xls"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'DelBtn
+        '
+        Me.DelBtn.Location = New System.Drawing.Point(690, 156)
+        Me.DelBtn.Name = "DelBtn"
+        Me.DelBtn.Size = New System.Drawing.Size(70, 23)
+        Me.DelBtn.TabIndex = 35
+        Me.DelBtn.Text = "Delete"
+        Me.DelBtn.UseVisualStyleBackColor = True
         '
         'EditBtn
         '
@@ -274,6 +301,7 @@ Partial Class ManageCustomer
         '
         Me.CustomerDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.CustomerDgv.Location = New System.Drawing.Point(6, 56)
+        Me.CustomerDgv.MultiSelect = False
         Me.CustomerDgv.Name = "CustomerDgv"
         Me.CustomerDgv.Size = New System.Drawing.Size(680, 191)
         Me.CustomerDgv.TabIndex = 0
@@ -281,8 +309,8 @@ Partial Class ManageCustomer
         'GroupBox3
         '
         Me.GroupBox3.Controls.Add(Me.SrcBtn)
-        Me.GroupBox3.Controls.Add(Me.Label11)
-        Me.GroupBox3.Controls.Add(Me.src_idTbx)
+        Me.GroupBox3.Controls.Add(Me.SrcPhneLbl)
+        Me.GroupBox3.Controls.Add(Me.src_phoneTbx)
         Me.GroupBox3.Controls.Add(Me.Label10)
         Me.GroupBox3.Controls.Add(Me.src_nameTbx)
         Me.GroupBox3.Location = New System.Drawing.Point(18, 15)
@@ -301,21 +329,21 @@ Partial Class ManageCustomer
         Me.SrcBtn.Text = "search"
         Me.SrcBtn.UseVisualStyleBackColor = True
         '
-        'Label11
+        'SrcPhneLbl
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(350, 13)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(18, 13)
-        Me.Label11.TabIndex = 31
-        Me.Label11.Text = "ID"
+        Me.SrcPhneLbl.AutoSize = True
+        Me.SrcPhneLbl.Location = New System.Drawing.Point(350, 13)
+        Me.SrcPhneLbl.Name = "SrcPhneLbl"
+        Me.SrcPhneLbl.Size = New System.Drawing.Size(38, 13)
+        Me.SrcPhneLbl.TabIndex = 31
+        Me.SrcPhneLbl.Text = "Phone"
         '
-        'src_idTbx
+        'src_phoneTbx
         '
-        Me.src_idTbx.Location = New System.Drawing.Point(398, 9)
-        Me.src_idTbx.Name = "src_idTbx"
-        Me.src_idTbx.Size = New System.Drawing.Size(133, 20)
-        Me.src_idTbx.TabIndex = 30
+        Me.src_phoneTbx.Location = New System.Drawing.Point(398, 9)
+        Me.src_phoneTbx.Name = "src_phoneTbx"
+        Me.src_phoneTbx.Size = New System.Drawing.Size(133, 20)
+        Me.src_phoneTbx.TabIndex = 30
         '
         'Label10
         '
@@ -359,32 +387,6 @@ Partial Class ManageCustomer
         Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
         Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
         Me.DeleteToolStripMenuItem.Text = "Delete"
-        '
-        'DelBtn
-        '
-        Me.DelBtn.Location = New System.Drawing.Point(690, 156)
-        Me.DelBtn.Name = "DelBtn"
-        Me.DelBtn.Size = New System.Drawing.Size(70, 23)
-        Me.DelBtn.TabIndex = 35
-        Me.DelBtn.Text = "Delete"
-        Me.DelBtn.UseVisualStyleBackColor = True
-        '
-        'NewCustBtn
-        '
-        Me.NewCustBtn.Location = New System.Drawing.Point(519, 149)
-        Me.NewCustBtn.Name = "NewCustBtn"
-        Me.NewCustBtn.Size = New System.Drawing.Size(70, 23)
-        Me.NewCustBtn.TabIndex = 38
-        Me.NewCustBtn.Text = "New"
-        Me.NewCustBtn.UseVisualStyleBackColor = True
-        '
-        'CustID
-        '
-        Me.CustID.Location = New System.Drawing.Point(657, 150)
-        Me.CustID.Name = "CustID"
-        Me.CustID.Size = New System.Drawing.Size(68, 20)
-        Me.CustID.TabIndex = 29
-        Me.CustID.Visible = False
         '
         'ManageCustomer
         '
@@ -446,8 +448,8 @@ Partial Class ManageCustomer
     Friend WithEvents Label9 As Label
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents SrcBtn As Button
-    Friend WithEvents Label11 As Label
-    Friend WithEvents src_idTbx As TextBox
+    Friend WithEvents SrcPhneLbl As Label
+    Friend WithEvents src_phoneTbx As TextBox
     Friend WithEvents Label10 As Label
     Friend WithEvents src_nameTbx As TextBox
     Friend WithEvents EditBtn As Button
@@ -459,6 +461,7 @@ Partial Class ManageCustomer
     Friend WithEvents EditToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DeleteToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DelBtn As Button
-    Friend WithEvents NewCustBtn As Button
     Friend WithEvents CustID As TextBox
+    Friend WithEvents Button1 As Button
+    Friend WithEvents FolderBrowserDialog1 As FolderBrowserDialog
 End Class
